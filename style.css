@@ -1,0 +1,47 @@
+.maps-box{
+  margin-top:50px;
+
+  text-align:center;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:30px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.maps-box h3{
+  font-size:35px;
+
+  margin-bottom:15px;
+
+  color:#2E5E4E;
+
+  font-family:'Cormorant Garamond',serif;
+}
+
+.btn-maps{
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:14px 30px;
+
+  border-radius:50px;
+
+  background:#2E5E4E;
+
+  color:white;
+
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.btn-maps:hover{
+  background:#7B3F00;
+
+  transform:translateY(-3px);
+}
