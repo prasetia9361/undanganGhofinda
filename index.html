@@ -2,1006 +2,181 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Wedding Of Ghofinda & Fida</title>
-
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-
-    :root{
-      --green:#2E5E4E;
-      --sage:#7A9B8E;
-      --mahogany:#7B3F00;
-      --white:#F8F8F8;
-      --text:#333;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Montserrat',sans-serif;
-      background:linear-gradient(to bottom,#ffffff,#f5f7f5);
-      color:var(--text);
-      overflow-x:hidden;
-    }
-
-    section{
-      padding:90px 20px;
-      position:relative;
-      overflow:hidden;
-      z-index:2;
-    }
-
-    .container{
-      max-width:1100px;
-      margin:auto;
-      position:relative;
-      z-index:2;
-    }
-
-    .title{
-      text-align:center;
-      margin-bottom:50px;
-    }
-
-    .title h2{
-      font-family:'Cormorant Garamond',serif;
-      font-size:60px;
-      font-weight:600;
-      letter-spacing:1px;
-      color:var(--green);
-    }
-
-    .title::after{
-      content:'❀';
-      display:block;
-      margin-top:10px;
-      font-size:24px;
-      color:var(--mahogany);
-    }
-
-    .title p{
-      margin-top:12px;
-      color:#666;
-      line-height:1.8;
-    }
-
-    /* FLOATING FLOWERS */
-
-    .floating-flowers{
-      position:fixed;
-      inset:0;
-      overflow:hidden;
-      pointer-events:none;
-      z-index:1;
-    }
-
-    .flower{
-      position:absolute;
-      top:-10%;
-      opacity:.15;
-      animation:fall linear infinite;
-    }
-
-    .flower:nth-child(1){
-      left:10%;
-      width:45px;
-      animation-duration:14s;
-    }
-
-    .flower:nth-child(2){
-      left:30%;
-      width:30px;
-      animation-duration:18s;
-    }
-
-    .flower:nth-child(3){
-      left:50%;
-      width:40px;
-      animation-duration:16s;
-    }
-
-    .flower:nth-child(4){
-      left:75%;
-      width:25px;
-      animation-duration:20s;
-    }
-
-    .flower:nth-child(5){
-      left:90%;
-      width:50px;
-      animation-duration:15s;
-    }
-
-    @keyframes fall{
-      from{
-        transform:translateY(-10vh) rotate(0deg);
-      }
-
-      to{
-        transform:translateY(120vh) rotate(360deg);
-      }
-    }
-
-    /* HERO */
-
-    .hero{
-      height:100vh;
-      background:
-      linear-gradient(rgba(46,94,78,.75),rgba(46,94,78,.75)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1974&auto=format&fit=crop') center/cover;
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:white;
-      position:relative;
-    }
-
-    .hero::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-      radial-gradient(circle at top left,rgba(255,255,255,.1),transparent 35%),
-      radial-gradient(circle at bottom right,rgba(255,255,255,.08),transparent 35%);
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      animation:fadeUp 1.5s ease;
-    }
-
-    .hero h4{
-      letter-spacing:5px;
-      font-weight:300;
-      margin-bottom:20px;
-    }
-
-    .hero h1{
-      font-family:'Great Vibes',serif;
-      font-size:120px;
-      font-weight:400;
-      line-height:1.2;
-    }
-
-    .quote{
-      max-width:700px;
-      margin:auto;
-      margin-bottom:30px;
-      line-height:1.8;
-      font-style:italic;
-      font-size:20px;
-    }
-
-    .btn,
-    .maps-btn,
-    .copy-btn{
-      display:inline-block;
-      padding:14px 35px;
-      border-radius:50px;
-      text-decoration:none;
-      background:var(--mahogany);
-      color:white;
-      transition:.3s;
-      font-weight:500;
-      border:none;
-      cursor:pointer;
-      box-shadow:0 10px 25px rgba(123,63,0,.2);
-    }
-
-    .btn:hover,
-    .maps-btn:hover,
-    .copy-btn:hover{
-      transform:translateY(-3px);
-      background:var(--sage);
-    }
-
-    /* CARD */
-
-    .glass{
-      background:rgba(255,255,255,.82);
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,.35);
-      box-shadow:0 15px 40px rgba(0,0,0,.08);
-    }
-
-    /* OPENING */
-
-    .opening{
-      text-align:center;
-    }
-
-    .opening h2{
-      font-family:'Cormorant Garamond',serif;
-      font-size:55px;
-      color:var(--green);
-      margin-bottom:20px;
-    }
-
-    .opening p{
-      max-width:800px;
-      margin:auto;
-      line-height:2;
-      color:#555;
-    }
-
-    /* DOA */
-
-    .quote-section{
-      background:
-      linear-gradient(rgba(46,94,78,.92),rgba(46,94,78,.92)),
-      url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop') center/cover;
-
-      color:white;
-      text-align:center;
-    }
-
-    .quote-section p{
-      max-width:850px;
-      margin:auto;
-      line-height:2;
-      font-size:22px;
-      font-style:italic;
-    }
-
-    /* COUPLE */
-
-.couple-wrapper{
-  display:flex;
-  gap:40px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.couple-card{
-  background:rgba(255,255,255,.65);
-  backdrop-filter:blur(10px);
-
-  padding:45px 35px;
-  border-radius:35px;
-
-  max-width:350px;
-  text-align:center;
-
-  box-shadow:0 10px 35px rgba(0,0,0,.08);
-
-  transition:.4s;
-}
-
-.couple-card:hover{
-  transform:translateY(-10px);
-}
-
-.couple-card img{
-
-  width:200px;
-  height:200px;
-
-  object-fit:cover;
-
-  border-radius:50%;
-
-  padding:8px;
-
-  background:white;
-
-  border:6px solid #7A9B8E;
-
-  margin:auto;
-  margin-bottom:30px;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.15),
-  0 0 0 8px rgba(122,155,142,.15);
-}
-
-.couple-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:58px;
-  font-weight:600;
-  color:var(--mahogany);
-
-  margin-bottom:15px;
-}
-
-.couple-card p{
-  line-height:1.9;
-  color:#555;
-}
-
-    /* STORY */
-
-    .story-box{
-      max-width:850px;
-      margin:auto;
-      padding:45px;
-      border-radius:30px;
-      line-height:2;
-      text-align:justify;
-      color:#555;
-    }
-
-    /* TIMELINE */
-
-    .timeline{
-      position:relative;
-      max-width:850px;
-      margin:auto;
-    }
-
-    .timeline::before{
-      content:'';
-      position:absolute;
-      left:50%;
-      top:0;
-      width:3px;
-      height:100%;
-      background:var(--sage);
-      transform:translateX(-50%);
-    }
-
-    .timeline-item{
-      position:relative;
-      width:50%;
-      padding:20px 40px;
-    }
-
-    .timeline-item:nth-child(odd){
-      left:0;
-      text-align:right;
-    }
-
-    .timeline-item:nth-child(even){
-      left:50%;
-    }
-
-    .timeline-content{
-      padding:25px;
-      border-radius:25px;
-      transition:.4s;
-    }
-
-    .timeline-content:hover{
-      transform:translateY(-8px);
-    }
-
-    .timeline-content span{
-      color:var(--green);
-      font-weight:600;
-      display:block;
-      margin-bottom:12px;
-    }
-
-    .timeline-content h3{
-      font-family:'Cormorant Garamond',serif;
-      color:var(--mahogany);
-      font-size:32px;
-      margin-bottom:12px;
-    }
-
-    /* EVENT */
-
-    .event-wrapper{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .event-card{
-      padding:40px 30px;
-      border-radius:30px;
-      text-align:center;
-      transition:.4s;
-    }
-
-    .event-card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 20px 45px rgba(46,94,78,.18);
-    }
-
-    .event-card h3{
-      font-family:'Cormorant Garamond',serif;
-      font-size:40px;
-      color:var(--mahogany);
-      margin-bottom:20px;
-    }
-
-    .event-card p{
-      line-height:1.9;
-      color:#555;
-      margin-bottom:10px;
-    }
-
-    /* COUNTDOWN */
-
-    .save-date{
-      background:var(--green);
-      color:white;
-      border-radius:35px;
-      text-align:center;
-      padding:60px 30px;
-    }
-
-    .save-date h2{
-      font-family:'Great Vibes',cursive;
-      font-size:80px;
-      font-weight:400;
-    }
-
-    .countdown{
-      margin-top:40px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .time-box{
-      background:white;
-      color:var(--green);
-      width:110px;
-      padding:25px 10px;
-      border-radius:20px;
-    }
-
-    .time-box h3{
-      font-size:40px;
-      margin-bottom:5px;
-    }
-
-    /* GALLERY */
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .gallery img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      border-radius:25px;
-      transition:.4s;
-      box-shadow:0 10px 25px rgba(0,0,0,.08);
-    }
-
-    .gallery img:hover{
-      transform:scale(1.03);
-    }
-/* RSVP */
-
-.wish-container{
-  margin-top:50px;
-
-  display:flex;
-  flex-direction:column;
-
-  gap:20px;
-}
-
-.wish-card{
-  background:rgba(255,255,255,.75);
-
-  backdrop-filter:blur(10px);
-
-  padding:25px;
-
-  border-radius:25px;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.06);
-
-  animation:fadeUp .7s ease;
-}
-
-.wish-card h4{
-  color:var(--green);
-
-  margin-bottom:10px;
-
-  font-size:20px;
-}
-
-.wish-card small{
-  color:#888;
-}
-
-.wish-card p{
-  margin-top:10px;
-
-  line-height:1.8;
-}
-    /* RSVP */
-
-    .rsvp-form{
-      max-width:700px;
-      margin:auto;
-      padding:40px;
-      border-radius:30px;
-    }
-
-    .rsvp-form input,
-    .rsvp-form textarea{
-      width:100%;
-      padding:16px;
-      margin-bottom:20px;
-      border:none;
-      border-radius:15px;
-      background:#f4f4f4;
-      font-family:'Poppins';
-    }
-
-    .rsvp-form button{
-      width:100%;
-    }
-
-    /* GIFT */
-
-    .gift-wrapper{
-  display:flex;
-  gap:30px;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-}
-
-.gift-card{
-  background:white;
-
-  padding:35px;
-
-  border-radius:30px;
-
-  text-align:center;
-
-  width:320px;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.08);
-}
-
-.gift-card h3{
-  font-size:35px;
-
-  color:var(--green);
-
-  margin-bottom:15px;
-
-  font-family:'Cormorant Garamond',serif;
-}
-
-.gift-card p{
-  font-size:24px;
-
-  font-weight:600;
-
-  letter-spacing:2px;
-
-  margin-bottom:10px;
-}
-
-.btn-copy{
-  border:none;
-
-  padding:12px 24px;
-
-  border-radius:50px;
-
-  background:var(--green);
-
-  color:white;
-
-  cursor:pointer;
-
-  transition:.3s;
-}
-
-.btn-copy:hover{
-  background:var(--mahogany);
-
-  transform:translateY(-3px);
-}
-
-    /* CLOSING */
-
-    .closing{
-      max-width:850px;
-      margin:auto;
-      text-align:center;
-    }
-
-    .closing p{
-      line-height:2;
-      margin-bottom:20px;
-      color:#555;
-    }
-
-    .quote-text{
-      font-style:italic;
-      font-size:22px;
-      color:var(--mahogany);
-    }
-
-    /* FOOTER */
-
-    footer{
-      background:var(--mahogany);
-      color:white;
-      text-align:center;
-      padding:40px 20px;
-    }
-
-    footer h3{
-      font-family:'Cormorant Garamond',serif;
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    /* MUSIC BUTTON */
-
-    .music-btn{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:60px;
-      height:60px;
-      border:none;
-      border-radius:50%;
-      background:var(--green);
-      color:white;
-      font-size:22px;
-      cursor:pointer;
-      z-index:999;
-      box-shadow:0 10px 25px rgba(46,94,78,.35);
-    }
-
-    /* ANIMATION */
-
-    @keyframes fadeUp{
-      from{
-        opacity:0;
-        transform:translateY(30px);
-      }
-
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:60px;
-      }
-
-      .title h2,
-      .save-date h2,
-      .opening h2{
-        font-size:44px;
-      }
-
-      .timeline::before{
-        left:10px;
-      }
-
-      .timeline-item{
-        width:100%;
-        left:0 !important;
-        padding-left:40px;
-        padding-right:0;
-        text-align:left !important;
-      }
-
-      .story-box,
-      .gift-card,
-      .rsvp-form{
-        padding:30px;
-      }
-
-    }
-.maps-box{
-  margin-top:50px;
-
-  text-align:center;
-
-  background:white;
-
-  padding:40px;
-
-  border-radius:30px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.maps-box h3{
-  font-size:35px;
-
-  margin-bottom:15px;
-
-  color:#2E5E4E;
-
-  font-family:'Cormorant Garamond',serif;
-}
-
-.btn-maps{
-  display:inline-block;
-
-  margin-top:20px;
-
-  padding:14px 30px;
-
-  border-radius:50px;
-
-  background:#2E5E4E;
-
-  color:white;
-
-  text-decoration:none;
-
-  transition:.3s;
-}
-
-.btn-maps:hover{
-  background:#7B3F00;
-
-  transform:translateY(-3px);
-}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#14352B" />
+  <title>The Wedding of Ghofinda &amp; Fida</title>
+  <meta name="description" content="Undangan pernikahan Muhammad Ghofinda Prasetia &amp; Mufidah Rizqiyah — Jum'at, 23 Oktober 2026." />
+
+  <!-- Open Graph (pratinjau saat link dibagikan di WhatsApp/Instagram).
+       Untuk gambar pratinjau, ganti dengan URL absolut setelah website di-hosting,
+       contoh: https://domainanda.com/images/prewed1.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Wedding of Ghofinda &amp; Fida" />
+  <meta property="og:description" content="Jum'at, 23 Oktober 2026 — Anda diundang untuk berbagi kebahagiaan bersama kami." />
+  <meta property="og:image" content="images/prewed1.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<script>
 
-function addWish(){
+<body class="locked">
 
-  const nama =
-    document.getElementById("nama").value;
+  <!-- ===== Ilustrasi botanical (eucalyptus) & daun — dipakai ulang lewat <use> ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="eucalyptus" viewBox="0 0 120 240">
+        <path d="M60 238 C52 182 72 124 58 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <g fill="currentColor">
+          <ellipse cx="42" cy="206" rx="17" ry="10" transform="rotate(-32 42 206)" fill-opacity=".9"/>
+          <ellipse cx="78" cy="190" rx="17" ry="10" transform="rotate(30 78 190)"  fill-opacity=".75"/>
+          <ellipse cx="46" cy="160" rx="16" ry="10" transform="rotate(-22 46 160)" fill-opacity=".8"/>
+          <ellipse cx="86" cy="141" rx="16" ry="10" transform="rotate(26 86 141)"  fill-opacity=".9"/>
+          <ellipse cx="50" cy="118" rx="15" ry="9"  transform="rotate(-30 50 118)" fill-opacity=".7"/>
+          <ellipse cx="82" cy="98"  rx="15" ry="9"  transform="rotate(30 82 98)"   fill-opacity=".85"/>
+          <ellipse cx="44" cy="78"  rx="14" ry="9"  transform="rotate(-26 44 78)"  fill-opacity=".9"/>
+          <ellipse cx="76" cy="58"  rx="13" ry="8"  transform="rotate(26 76 58)"   fill-opacity=".7"/>
+          <ellipse cx="46" cy="40"  rx="12" ry="7"  transform="rotate(-30 46 40)"  fill-opacity=".8"/>
+          <ellipse cx="70" cy="22"  rx="11" ry="7"  transform="rotate(34 70 22)"   fill-opacity=".85"/>
+          <ellipse cx="58" cy="9"   rx="7"  ry="11" fill-opacity=".9"/>
+        </g>
+      </symbol>
+      <symbol id="leaf" viewBox="0 0 24 32">
+        <path d="M12 0 C21 8 21 23 12 32 C3 23 3 8 12 0 Z" fill="currentColor"/>
+        <path d="M12 4 L12 30" stroke="#14352B" stroke-opacity=".35" stroke-width="1" fill="none"/>
+      </symbol>
+    </defs>
+  </svg>
 
-  const jumlah =
-    document.getElementById("jumlah").value;
-
-  const ucapan =
-    document.getElementById("ucapan").value;
-
-  if(
-    nama === "" ||
-    ucapan === ""
-  ){
-    alert("Isi nama dan ucapan dulu ya ✨");
-    return;
-  }
-
-  const container =
-    document.getElementById("wishContainer");
-
-  const card =
-    document.createElement("div");
-
-  card.classList.add("wish-card");
-
-  card.innerHTML = `
-    <h4>${nama}</h4>
-
-    <small>
-      Jumlah tamu: ${jumlah}
-    </small>
-
-    <p>${ucapan}</p>
-  `;
-
-  container.prepend(card);
-
-  document.getElementById("nama").value = "";
-  document.getElementById("jumlah").value = "";
-  document.getElementById("ucapan").value = "";
-
-}
-
-</script>
-
-<script>
-
-function copyText(id){
-
-  const text =
-    document.getElementById(id).innerText;
-
-  navigator.clipboard.writeText(text);
-
-  alert("Berhasil disalin ✨");
-
-}
-
-</script>
-
-<body>
-
-  <!-- FLOWER ANIMATION -->
-  <div class="floating-flowers">
-    <img src="https://cdn-icons-png.flaticon.com/512/766/766212.png" class="flower">
-    <img src="https://cdn-icons-png.flaticon.com/512/766/766212.png" class="flower">
-    <img src="https://cdn-icons-png.flaticon.com/512/766/766212.png" class="flower">
-    <img src="https://cdn-icons-png.flaticon.com/512/766/766212.png" class="flower">
-    <img src="https://cdn-icons-png.flaticon.com/512/766/766212.png" class="flower">
+  <!-- Daun berjatuhan -->
+  <div class="falling-leaves" aria-hidden="true">
+    <svg class="leaf" viewBox="0 0 24 32"><use href="#leaf"/></svg>
+    <svg class="leaf" viewBox="0 0 24 32"><use href="#leaf"/></svg>
+    <svg class="leaf" viewBox="0 0 24 32"><use href="#leaf"/></svg>
+    <svg class="leaf" viewBox="0 0 24 32"><use href="#leaf"/></svg>
+    <svg class="leaf" viewBox="0 0 24 32"><use href="#leaf"/></svg>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- ===================== 1. COVER / HERO ===================== -->
+  <section class="hero" id="cover">
+    <svg class="botanical tl" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <svg class="botanical br" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
 
     <div class="hero-content">
+      <p class="kicker">THE WEDDING OF</p>
 
-      <h4>UNDANGAN PERNIKAHAN</h4>
-
-      <h1>
-        Ghofinda <br>
-        & Fida
-      </h1>
-
-      <p class="quote">
-        “Kami dipertemukan bukan karena kebetulan,
-        tetapi karena doa-doa yang diaminkan langit.”
-      </p>
-
-      <p>Kepada Yth.</p>
-
-      <h3 id="guestName">Tamu Undangan</h3>
-
-      <br>
-
-      <a href="#opening" class="btn">
-        Buka Undangan
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- OPENING -->
-  <section class="opening" id="opening">
-
-    <div class="container">
-
-      <div class="title">
-        <h2>Assalamu'alaikum</h2>
+      <div class="arch">
+        <img src="images/prewed1.jpg" alt="Foto prewedding Ghofinda &amp; Fida" fetchpriority="high" decoding="async" />
       </div>
 
+      <h1>Ghofinda &amp; Fida</h1>
+      <p class="date">23 · 10 · 2026</p>
+
+      <p class="quote">“Kami dipertemukan bukan karena kebetulan, tetapi karena doa-doa yang diaminkan langit.”</p>
+
+      <div class="guest-box">
+        <small>Kepada Yth. Bapak/Ibu/Saudara/i</small>
+        <h3 id="guestName">Tamu Undangan</h3>
+        <button type="button" class="btn" id="openBtn">Buka Undangan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OPENING ===================== -->
+  <section class="opening bg-cream" id="opening">
+    <svg class="botanical tr" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <div class="container reveal">
+      <h2>Assalamu'alaikum</h2>
       <p>
         Dengan memohon rahmat dan ridho Allah SWT,
         kami bermaksud menyelenggarakan acara
         pernikahan putra-putri kami.
       </p>
-
     </div>
-
   </section>
 
-  <!-- DOA -->
-  <section class="quote-section">
-
-    <div class="container">
-
+  <!-- ===================== DOA ===================== -->
+  <section class="quote-section bg-medium">
+    <div class="container reveal">
       <p>
         “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
         untukmu pasangan hidup dari jenismu sendiri,
         supaya kamu merasa tenteram kepadanya,
         dan dijadikan-Nya di antaramu rasa kasih dan sayang.”
-        <br><br>
-        (QS. Ar-Rum : 21)
       </p>
-
+      <cite>QS. Ar-Rum : 21</cite>
     </div>
-
   </section>
 
-  <!-- COUPLE -->
-  <section>
+  <!-- ===================== 3. DATA MEMPELAI ===================== -->
+  <section class="bg-dark" id="couple">
+    <svg class="botanical tl" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <svg class="botanical br" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
 
     <div class="container">
-
-      <div class="title">
+      <div class="title reveal">
         <h2>Pasangan Mempelai</h2>
       </div>
 
       <div class="couple-wrapper">
-
-
-          <div class="couple-card glass">
-
-            <img src="ghofinda.jpg">
-
-            <h3>Ghofinda</h3>
-
-            <p>
-              Putra dari <br>
-              Bapak Teguh Prayitno <br>
-              & Ibu Alfiyah
-            </p>
-
-            <p style="margin-top:15px; font-size:14px;">
-              📍 Alamat: <br>
-              Desa Sidorejo, Kec. Warungasem,
-              Kabupaten Batang
-            </p>
-
+        <div class="couple-card glass reveal">
+          <div class="dome">
+            <img src="images/gofinda3.jpg" alt="Muhammad Ghofinda Prasetia" loading="lazy" decoding="async" />
           </div>
-
-
-        <div class="couple-card glass">
-
-          <img src="mufida.jpg">
-
-          <h3>Mufida</h3>
-
+          <h3>Ghofinda</h3>
+          <p class="full-name">Muhammad Ghofinda Prasetia</p>
           <p>
-            Putri dari <br>
-            Bapak Muhammad Arifin <br>
-            & Ibu Khomsiyah
+            Putra dari<br />
+            Bpk. Teguh Prayitno &amp; Ibu Alfiyah
           </p>
-
-          <p style="margin-top:15px; font-size:14px;">
-            📍 Alamat: <br>
-            Desa Galangpengampon, 
-            Kec. Wonopringgo, Kab. Pekalongan
+          <p class="addr">
+            📍 Ds. Sidorejo, Kec. Warungasem,<br />Kab. Batang
           </p>
-
         </div>
 
-
+        <div class="couple-card glass reveal">
+          <div class="dome">
+            <img src="images/mufida.jpg" alt="Mufidah Rizqiyah" loading="lazy" decoding="async" />
+          </div>
+          <h3>Fida</h3>
+          <p class="full-name">Mufidah Rizqiyah</p>
+          <p>
+            Putri dari<br />
+            Bpk. Muhammad Arifin &amp; Ibu Khomsiyah
+          </p>
+          <p class="addr">
+            📍 Ds. Galangpengampon, Kec. Wonopringgo,<br />Kab. Pekalongan
+          </p>
+        </div>
       </div>
-
     </div>
-
   </section>
 
-  <!-- STORY -->
-  <section>
-
+  <!-- ===================== STORY ===================== -->
+  <section class="bg-cream" id="story">
     <div class="container">
-
-      <div class="title">
+      <div class="title reveal">
         <h2>Our Story</h2>
         <p>Bertumbuh dalam Ilmu, Bersatu dalam Ikrar</p>
       </div>
 
-      <div class="story-box glass">
-
+      <div class="story-box glass reveal">
         <p>
-           Tidak ada yang kebetulan dari sebuah pertemuan.
-           Tahun 2022 menjadi awal cerita kami,
-           dipertemukan dalam satu ruang belajar,
-           lalu tumbuh menjadi dua hati
-           yang saling menemukan arah pulang.
+          Tidak ada yang kebetulan dari sebuah pertemuan.
+          Tahun 2022 menjadi awal cerita kami,
+          dipertemukan dalam satu ruang belajar,
+          lalu tumbuh menjadi dua hati
+          yang saling menemukan arah pulang.
         </p>
-
-        <br>
-
         <p>
           Kami berjalan tanpa tergesa.
           Mengenal satu sama lain melalui waktu,
           doa-doa yang diam,
           serta langkah kecil yang terus dijaga bersama.
         </p>
-
-
-        <br>
-
         <p>
           Bukan tentang seberapa cepat cerita ini dimulai,
           tetapi tentang bagaimana kami bertahan,
@@ -1009,36 +184,27 @@ function copyText(id){
           dan percaya bahwa cinta yang baik
           akan selalu menemukan jalannya.
         </p>
-
-        <br>
-
         <p>
-          Dari ruang belajar yang sama, tumbuh niat yang searah,
+          Dari ruang belajar yang sama, tumbuh niat yang searah.
           Hingga pada akhirnya, kami sampai pada titik ini —
           mengikat janji dalam ridho Allah SWT,
           untuk tumbuh bersama, seumur hidup,
           dalam cinta, iman, dan ketenangan.
         </p>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- TIMELINE -->
-  <section>
-
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="bg-medium" id="timeline">
     <div class="container">
-
-      <div class="title">
+      <div class="title reveal">
         <h2>Journey of Love</h2>
         <p>Perjalanan kami hingga menuju pernikahan</p>
       </div>
 
       <div class="timeline">
-
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-content glass">
             <span>April 2022</span>
             <h3>Awal Bertemu</h3>
@@ -1046,7 +212,7 @@ function copyText(id){
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-content glass">
             <span>29 Oktober 2022</span>
             <h3>Menjalin Hubungan</h3>
@@ -1054,7 +220,7 @@ function copyText(id){
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-content glass">
             <span>06 April 2025</span>
             <h3>Tunangan</h3>
@@ -1062,425 +228,201 @@ function copyText(id){
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-content glass">
             <span>23 Oktober 2026</span>
             <h3>Menikah</h3>
             <p>InsyaAllah kami akan memulai kehidupan baru bersama.</p>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- ACARA -->
-  <!-- EVENT -->
-<section>
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Rangkaian Acara</h2>
-    </div>
-
-    <div class="event-wrapper">
-
-      <!-- AKAD -->
-      <div class="event-card">
-        <h3>Akad Nikah</h3>
-
-        <p>
-          Jum'at, 23 Oktober 2026
-        </p>
-
-        <p>
-          07.00 WIB
-        </p>
-
-        <p>
-          Kediaman Mempelai Putri
-        </p>
-      </div>
-
-      <!-- RESEPSI -->
-      <div class="event-card">
-        <h3>Resepsi</h3>
-        <p>
-          Jum'at, 23 Oktober 2026
-        </p>
-        <p>
-          13.00 - 15.30 WIB
-        </p>
-
-        <p>
-          Kediaman Mempelai Putri
-        </p>
-      </div>
-
-      <!-- RAMAH TAMAH -->
-      <div class="event-card">
-        <h3>Ramah Tamah</h3>
-        <p>
-          Jum'at, 23 Oktober 2026
-        </p>
-        <p>
-          15.30 WIB - selesai
-        </p>
-
-        <p>
-          Kediaman Mempelai Putri
-        </p>
-      </div>
-
-    </div>
-
-    <!-- MAPS -->
-    <div class="maps-box">
-
-      <h3>📍 Lokasi Acara</h3>
-
-      <p>
-        Dk. Pekanyaran RT 06/RW 02 No. 06 <br>
-        Desa Galangpengampon, Kec. Wonopringgo <br>
-        Pekalongan, Jawa Tengah
-      </p>
-
-      <a
-        href="https://maps.app.goo.gl/N3aD2TCSLyny9rNp6"
-        target="_blank"
-        class="btn-maps"
-      >
-        Buka Google Maps
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- SAVE DATE -->
-  <section>
+  <!-- ===================== 4. RANGKAIAN ACARA & LOKASI ===================== -->
+  <section class="bg-dark" id="event">
+    <svg class="botanical tr" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <svg class="botanical bl" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
 
     <div class="container">
-
-      <div class="save-date">
-
-        <h2>Save The Date</h2>
-
+      <div class="title reveal">
+        <h2>Rangkaian Acara</h2>
         <p>Jum'at, 23 Oktober 2026</p>
+      </div>
 
-        <div class="countdown">
-
-          <div class="time-box">
-            <h3 id="days">0</h3>
-            <small>Hari</small>
-          </div>
-
-          <div class="time-box">
-            <h3 id="hours">0</h3>
-            <small>Jam</small>
-          </div>
-
-          <div class="time-box">
-            <h3 id="minutes">0</h3>
-            <small>Menit</small>
-          </div>
-
-          <div class="time-box">
-            <h3 id="seconds">0</h3>
-            <small>Detik</small>
-          </div>
-
+      <div class="event-wrapper">
+        <div class="event-card glass reveal">
+          <h3>Akad Nikah</h3>
+          <p>Jum'at, 23 Oktober 2026</p>
+          <p class="time">07.00 WIB</p>
+          <p>Kediaman Mempelai Putri</p>
         </div>
 
+        <div class="event-card glass reveal">
+          <h3>Resepsi</h3>
+          <p>Jum'at, 23 Oktober 2026</p>
+          <p class="time">13.00 – 15.30 WIB</p>
+          <p>Kediaman Mempelai Putri</p>
+        </div>
+
+        <div class="event-card glass reveal">
+          <h3>Ramah Tamah</h3>
+          <p>Jum'at, 23 Oktober 2026</p>
+          <p class="time">15.30 WIB – selesai</p>
+          <p>Kediaman Mempelai Putri</p>
+        </div>
       </div>
 
+      <div class="maps-box glass reveal">
+        <h3>📍 Lokasi Acara</h3>
+        <p>
+          Dk. Pekanyaran RT 06/RW 02 No. 06<br />
+          Desa Galangpengampon, Kec. Wonopringgo<br />
+          Kab. Pekalongan, Jawa Tengah
+        </p>
+        <a href="https://maps.app.goo.gl/N3aD2TCSLyny9rNp6" target="_blank" rel="noopener noreferrer" class="btn">
+          Buka Google Maps
+        </a>
+      </div>
     </div>
-
   </section>
 
-  <!-- GALLERY -->
-  <section>
-
+  <!-- ===================== 5. COUNTDOWN ===================== -->
+  <section class="bg-medium" id="save-date">
     <div class="container">
+      <div class="save-date glass reveal">
+        <h2>Save The Date</h2>
+        <p>Jum'at, 23 Oktober 2026</p>
 
-      <div class="title">
+        <div class="countdown" id="countdown">
+          <div class="time-box"><h3 id="days">0</h3><small>Hari</small></div>
+          <div class="time-box"><h3 id="hours">00</h3><small>Jam</small></div>
+          <div class="time-box"><h3 id="minutes">00</h3><small>Menit</small></div>
+          <div class="time-box"><h3 id="seconds">00</h3><small>Detik</small></div>
+        </div>
+        <p class="countdown-done" id="countdownDone" hidden>Hari bahagia telah tiba 🤍</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERI ===================== -->
+  <section class="bg-cream" id="gallery">
+    <div class="container">
+      <div class="title reveal">
         <h2>Gallery</h2>
+        <p>Potret kebahagiaan kami</p>
       </div>
 
-      <div class="gallery">
-
-        <img src="prewed4.jpg">
-
-        <img src="prewed1.jpg">
-
-        <img src="prewed2.jpg">
-
-        <img src="prewed5(1).jpg">
-
-        <img src="weding1.jpg">
-
-        <img src="weding4.jpg">
-
-        <img src="weding5.jpg">
-
-        <img src="weding2.jpg">
-
+      <div class="gallery reveal">
+        <button type="button" data-full="images/prewed5.jpg"><img src="images/thumb/prewed5.jpg" alt="Foto prewedding 1" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/prewed4.jpg"><img src="images/thumb/prewed4.jpg" alt="Foto prewedding 2" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/prewed2.jpg"><img src="images/thumb/prewed2.jpg" alt="Foto prewedding 3" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/weding1.jpg"><img src="images/thumb/weding1.jpg" alt="Foto pernikahan 1" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/weding4.jpg"><img src="images/thumb/weding4.jpg" alt="Foto pernikahan 2" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/prewed1.jpg"><img src="images/thumb/prewed1.jpg" alt="Foto prewedding 4" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/weding5.jpg"><img src="images/thumb/weding5.jpg" alt="Foto pernikahan 3" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/weding2.jpg"><img src="images/thumb/weding2.jpg" alt="Foto pernikahan 4" loading="lazy" decoding="async" /></button>
       </div>
-
     </div>
-
   </section>
 
-  <!-- RSVP -->
-<section id="rsvp">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Ucapan & Kehadiran</h2>
-
-      <p>
-        Doa dan ucapan terbaik dari keluarga
-        dan sahabat tercinta
-      </p>
-    </div>
-
-    <!-- FORM -->
-    <div class="rsvp-form glass">
-
-      <input
-        type="text"
-        id="nama"
-        placeholder="Nama"
-      >
-
-      <input
-        type="number"
-        id="jumlah"
-        placeholder="Jumlah Tamu"
-      >
-
-      <textarea
-        id="ucapan"
-        rows="5"
-        placeholder="Tulis ucapan dan doa..."
-      ></textarea>
-
-      <button
-        class="btn"
-        onclick="addWish()"
-      >
-        Kirim Ucapan
-      </button>
-
-    </div>
-
-    <!-- LIST UCAPAN -->
-    <div id="wishContainer" class="wish-container">
-
-    </div>
-
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau foto">
+    <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Tutup">&times;</button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" aria-label="Foto sebelumnya">&#8249;</button>
+    <img id="lbImg" alt="" />
+    <button type="button" class="lb-btn lb-next" id="lbNext" aria-label="Foto berikutnya">&#8250;</button>
+    <div class="lb-count" id="lbCount"></div>
   </div>
 
-</section>
-
-  <!-- WEDDING GIFT -->
-<section id="gift">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Wedding Gift</h2>
-
-      <p>
-        Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
-        Namun jika memberi adalah bentuk tanda kasih,
-        kami dengan senang hati menerimanya.
-      </p>
-    </div>
-
-    <div class="gift-wrapper">
-
-      <!-- BANK -->
-      <div class="gift-card glass">
-
-        <h3>Bank BCA</h3>
-
-        <p id="rekening1">
-          2490986327
-        </p>
-
-        <small>
-          a.n. Muhammad Ghofinda Prasetia
-        </small>
-
-        <br><br>
-
-        <button
-          class="btn-copy"
-          onclick="copyText('rekening1')"
-        >
-          Salin Nomor Rekening
-        </button>
-
-      </div>
-
-      <!-- DANA -->
-      <div class="gift-card glass">
-
-        <h3>DANA</h3>
-
-        <p id="dana1">
-          085712778093
-        </p>
-
-        <small>
-          a.n. Mufidah Rizqiyah
-        </small>
-
-        <br><br>
-
-        <button
-          class="btn-copy"
-          onclick="copyText('dana1')"
-        >
-          Salin Nomor DANA
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- PENUTUP -->
-  <section>
-
+  <!-- ===================== RSVP / UCAPAN ===================== -->
+  <section class="bg-dark" id="rsvp">
+    <svg class="botanical tl" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
     <div class="container">
+      <div class="title reveal">
+        <h2>Ucapan &amp; Kehadiran</h2>
+        <p>Doa dan ucapan terbaik dari keluarga dan sahabat tercinta</p>
+      </div>
 
-      <div class="closing">
+      <div class="rsvp-form glass reveal">
+        <input type="text" id="nama" placeholder="Nama" autocomplete="name" maxlength="60" />
+        <input type="number" id="jumlah" placeholder="Jumlah Tamu" min="1" max="20" inputmode="numeric" />
+        <textarea id="ucapan" rows="5" placeholder="Tulis ucapan dan doa..." maxlength="500"></textarea>
+        <button type="button" class="btn btn-block" onclick="addWish()">Kirim Ucapan</button>
+      </div>
 
+      <div id="wishContainer" class="wish-container"></div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. AMPLOP DIGITAL ===================== -->
+  <section class="bg-cream" id="gift">
+    <div class="container">
+      <div class="title reveal">
+        <h2>Wedding Gift</h2>
+        <p>
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
+          Namun jika memberi adalah bentuk tanda kasih,
+          kami dengan senang hati menerimanya.
+        </p>
+      </div>
+
+      <div class="gift-wrapper">
+        <div class="gift-card glass reveal">
+          <div class="bank-logo">Bank BCA</div>
+          <p class="acc-number" id="rekening1">2490986327</p>
+          <small>a.n. Muhammad Ghofinda Prasetia</small>
+          <button type="button" class="btn-copy" onclick="copyToClipboard('rekening1', 'Nomor rekening BCA')">Salin Nomor Rekening</button>
+        </div>
+
+        <div class="gift-card glass reveal">
+          <div class="bank-logo">DANA</div>
+          <p class="acc-number" id="dana1">085712778093</p>
+          <small>a.n. Mufidah Rizqiyah</small>
+          <button type="button" class="btn-copy" onclick="copyToClipboard('dana1', 'Nomor DANA')">Salin Nomor DANA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PENUTUP ===================== -->
+  <section class="bg-medium" id="closing">
+    <svg class="botanical tr" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <svg class="botanical bl" viewBox="0 0 120 240" aria-hidden="true"><use href="#eucalyptus"/></svg>
+    <div class="container">
+      <div class="closing reveal">
         <p>
           Merupakan suatu kehormatan dan kebahagiaan bagi kami
           apabila Bapak/Ibu/Saudara/i berkenan hadir
           serta memberikan doa restu.
         </p>
-
         <p class="quote-text">
           “Cinta terbaik adalah yang membawa kita
           semakin dekat kepada Allah,
           lalu menumbuhkan ketenangan dalam kehidupan.”
         </p>
-
-        <p>
-          Wassalamu'alaikum Warahmatullahi Wabarakatuh
-        </p>
-
+        <p class="salam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
       </div>
-
     </div>
-
   </section>
 
-  <!-- FOOTER -->
   <footer>
-
-    <h3>Ghofinda & Fida</h3>
-
-    <p>
-      Terima kasih atas doa dan kehadirannya
-    </p>
-
+    <h3>Ghofinda &amp; Fida</h3>
+    <p>Terima kasih atas doa dan kehadirannya</p>
   </footer>
 
-  <!-- MUSIC -->
-  <audio id="music" autoplay loop>
-  <source src="weddingnasheed.mp3" type="audio/mp3">
-</audio>
+  <!-- ===================== 2. AUDIO ===================== -->
+  <audio id="music" loop preload="metadata">
+    <source src="For%20the%20Rest%20of%20My%20Life.mp3" type="audio/mpeg" />
+  </audio>
 
-  <!-- MUSIC BUTTON -->
-  <button class="music-btn" onclick="toggleMusic()">
-    ♫
+  <button type="button" class="music-btn" id="musicBtn" aria-label="Putar musik">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
   </button>
 
-  <!-- SCRIPT -->
-  <script>
+  <!-- Toast notifikasi -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    // NAMA TAMU
-    const params = new URLSearchParams(window.location.search);
-
-    const guest = params.get('to');
-
-    document.getElementById('guestName').innerText =
-      guest ? guest.replace(/\+/g,' ') : 'Tamu Undangan';
-
-
-    // COUNTDOWN
-    const targetDate =
-      new Date("October 23, 2026 07:00:00").getTime();
-
-    setInterval(() => {
-
-      const now = new Date().getTime();
-
-      const distance = targetDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-      );
-
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-      );
-
-      const seconds = Math.floor(
-        (distance % (1000 * 60)) / 1000
-      );
-
-      document.getElementById("days").innerHTML = days;
-      document.getElementById("hours").innerHTML = hours;
-      document.getElementById("minutes").innerHTML = minutes;
-      document.getElementById("seconds").innerHTML = seconds;
-
-    },1000);
-
-
-    // MUSIC CONTROL
-    const music = document.getElementById("music");
-
-    function toggleMusic(){
-
-      if(music.paused){
-        music.play();
-      }else{
-        music.pause();
-      }
-
-    }
-
-
-    // COPY REKENING
-    function copyRek(){
-
-      navigator.clipboard.writeText("1234567890");
-
-      alert("Nomor rekening berhasil disalin");
-
-    }
-
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-```
