@@ -252,6 +252,7 @@
 
       <div class="event-wrapper">
         <div class="event-card glass reveal">
+          <div class="ev-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M12 3l1.5 2.5L12 8 10.5 5.5z"/></svg></div>
           <h3>Akad Nikah</h3>
           <p>Jum'at, 23 Oktober 2026</p>
           <p class="time">07.00 WIB</p>
@@ -259,6 +260,7 @@
         </div>
 
         <div class="event-card glass reveal">
+          <div class="ev-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 6.3L21 12l-6.8 2.7L12 21l-2.2-6.3L3 12l6.8-2.7z"/></svg></div>
           <h3>Resepsi</h3>
           <p>Jum'at, 23 Oktober 2026</p>
           <p class="time">13.00 – 15.30 WIB</p>
@@ -266,10 +268,11 @@
         </div>
 
         <div class="event-card glass reveal">
+          <div class="ev-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 8h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 9h2a2 2 0 0 1 0 4h-2M7 21h9"/></svg></div>
           <h3>Ramah Tamah</h3>
           <p>Jum'at, 23 Oktober 2026</p>
-          <p class="time">15.30 WIB – selesai</p>
-          <p>Kediaman Mempelai Putri</p>
+          <p class="time">18.00 WIB – selesai</p>
+          <p>Kediaman Mempelai Pria</p>
         </div>
       </div>
 
@@ -280,7 +283,7 @@
           Desa Galangpengampon, Kec. Wonopringgo<br />
           Kab. Pekalongan, Jawa Tengah
         </p>
-        <a href="https://maps.app.goo.gl/N3aD2TCSLyny9rNp6" target="_blank" rel="noopener noreferrer" class="btn">
+        <a href="https://maps.app.goo.gl/PaKrZo8xki3nFgh39" target="_blank" rel="noopener noreferrer" class="btn">
           Buka Google Maps
         </a>
       </div>
@@ -319,7 +322,7 @@
         <button type="button" data-full="images/prewed2.jpg"><img src="images/thumb/prewed2.jpg" alt="Foto prewedding 3" loading="lazy" decoding="async" /></button>
         <button type="button" data-full="images/weding1.jpg"><img src="images/thumb/weding1.jpg" alt="Foto pernikahan 1" loading="lazy" decoding="async" /></button>
         <button type="button" data-full="images/weding4.jpg"><img src="images/thumb/weding4.jpg" alt="Foto pernikahan 2" loading="lazy" decoding="async" /></button>
-        <button type="button" data-full="images/prewed1.jpg"><img src="images/thumb/prewed1.jpg" alt="Foto prewedding 4" loading="lazy" decoding="async" /></button>
+        <button type="button" data-full="images/medium/prewed1.jpg"><img src="images/thumb/prewed1.jpg" alt="Foto prewedding 4" loading="lazy" decoding="async" /></button>
         <button type="button" data-full="images/weding5.jpg"><img src="images/thumb/weding5.jpg" alt="Foto pernikahan 3" loading="lazy" decoding="async" /></button>
         <button type="button" data-full="images/weding2.jpg"><img src="images/thumb/weding2.jpg" alt="Foto pernikahan 4" loading="lazy" decoding="async" /></button>
       </div>
@@ -376,10 +379,10 @@
         </div>
 
         <div class="gift-card glass reveal">
-          <div class="bank-logo">DANA</div>
-          <p class="acc-number" id="dana1">085712778093</p>
-          <small>a.n. Mufidah Rizqiyah</small>
-          <button type="button" class="btn-copy" onclick="copyToClipboard('dana1', 'Nomor DANA')">Salin Nomor DANA</button>
+          <div class="bank-logo">Bank BRI</div>
+          <p class="acc-number" id="rekening2">8176 0101 3276 530</p>
+          <small>a.n. Muhammad Ghofinda Prasetia</small>
+          <button type="button" class="btn-copy" onclick="copyToClipboard('rekening2', 'Nomor rekening BRI')">Salin Nomor Rekening</button>
         </div>
       </div>
     </div>
@@ -409,6 +412,7 @@
   <footer>
     <h3>Ghofinda &amp; Fida</h3>
     <p>Terima kasih atas doa dan kehadirannya</p>
+    <p class="credit">Created by PT. Global Fitur Inovasi Teknologi</p>
   </footer>
 
   <!-- ===================== 2. AUDIO ===================== -->
@@ -419,6 +423,14 @@
   <button type="button" class="music-btn" id="musicBtn" aria-label="Putar musik">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
   </button>
+
+  <nav class="dock" aria-label="Navigasi undangan">
+    <a href="#couple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span>Mempelai</span></a>
+    <a href="#event"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>Acara</span></a>
+    <a href="#gallery"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 9"/></svg><span>Galeri</span></a>
+    <a href="#rsvp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Ucapan</span></a>
+    <a href="#gift"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M12 9v11M4 13h16M12 9c-3 0-4-4-1.5-4S12 9 12 9zm0 0c3 0 4-4 1.5-4S12 9 12 9z"/></svg><span>Hadiah</span></a>
+  </nav>
 
   <!-- Toast notifikasi -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
