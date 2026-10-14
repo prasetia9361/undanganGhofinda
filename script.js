@@ -157,7 +157,7 @@ lightbox.addEventListener('touchend', e => {
 /* ---------- 6. Ucapan & kehadiran ---------- */
 // Tempel URL Web App Google Apps Script (berakhiran /exec) di antara tanda kutip.
 // Jika dikosongkan, ucapan hanya tampil di perangkat pengirim (tidak tersimpan).
-const WISH_API = 'https://script.google.com/macros/s/AKfycbzkknT9xZx8JjJovzGU4NuSsElX05r4UnZJqI-H_L1lPzK1lIkQDBZkx9HNG79XKJcvgA/exec';
+const WISH_API = 'https://script.google.com/macros/s/AKfycbxx4q0EfCWpZRikGaH63oNAJjVi4T7oYnodjJi--djZ9ardCtxj3e1tYId_40sOXpmMyg/exec';
 
 function buildWishCard(w) {
   // Dibuat dengan textContent (bukan innerHTML) agar aman dari injeksi HTML/XSS
