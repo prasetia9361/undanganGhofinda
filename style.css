@@ -313,6 +313,7 @@ section { position: relative; padding: 80px 22px; overflow: hidden; }
    4. RANGKAIAN ACARA & LOKASI
    ========================================================= */
 .event-wrapper { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+@media (min-width: 601px) { .event-wrapper { grid-template-columns: repeat(2, 1fr); } }
 .event-card { padding: 34px 24px; text-align: center; transition: transform .4s var(--ease), box-shadow .4s; }
 .event-card:hover { transform: translateY(-6px); box-shadow: 0 22px 46px rgba(0, 0, 0, .3); }
 .event-card h3 { font-family: var(--font-heading); font-weight: 600; font-size: 32px; color: var(--gold-soft); margin-bottom: 12px; }
